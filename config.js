@@ -1,8 +1,8 @@
 let config = {
   emailjs: {
-    serviceID: "gmail",
-    templateID: "template_zHretJ0d",
-    userID: "user_8g0rh3d6Qj1QZBEU8USls"
+    serviceID: "service_nwgzxao",
+    templateID: "template_6lstm4x",
+    userID: "user_ydr7EblLzN0x6KKwwxFlg"
   }
 };
 

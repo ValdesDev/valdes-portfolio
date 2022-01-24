@@ -17,7 +17,7 @@
         <span
           class="title text-center"
           :class="{ pgray: !nightMode, 'text-light': nightMode }"
-          >Contact.</span
+          >Contact</span
         >
       </div>
       <hr
@@ -155,7 +155,7 @@ export default {
           user_email: this.email,
           from_name: this.name,
           message_html: this.text,
-          to_name: "Mahy Mohab",
+          to_name: "José Luis Valdés",
         };
 
         emailjs

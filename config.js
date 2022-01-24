@@ -1,8 +1,8 @@
 let config = {
   emailjs: {
-    serviceID: "service_nwgzxao",
-    templateID: "template_6lstm4x",
-    userID: "user_ydr7EblLzN0x6KKwwxFlg"
+    serviceID: process.env.VUE_APP_SERVICE_ID,
+    templateID: process.env.VUE_APP_TEMPLATE_ID,
+    userID: process.env.VUE_APP_USER_ID
   }
 };
 

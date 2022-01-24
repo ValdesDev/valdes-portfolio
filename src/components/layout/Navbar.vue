@@ -25,22 +25,13 @@
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span style="color: gray; font-size: 23px;"
+          <span style="color: gray; font-size: 23px"
             ><i class="fas fa-bars"></i>
-            </span>
+          </span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item mx-2">
-              <a
-                class="nav-link"
-                href="/about"
-                @click.prevent="$emit('scroll', 'about')"
-                :class="{ 'text-light': nightMode }"
-                >About</a
-              >
-            </li>
             <li class="nav-item mx-2">
               <a
                 class="nav-link"
@@ -50,13 +41,22 @@
                 >Skills</a
               >
             </li>
-            <li class="nav-item mx-2 ">
+            <li class="nav-item mx-2">
               <a
                 class="nav-link"
                 href="/portfolio"
                 @click.prevent="$emit('scroll', 'portfolio')"
                 :class="{ 'text-light': nightMode }"
-                >Portfolio</a
+                >Projects</a
+              >
+            </li>
+            <li class="nav-item mx-2">
+              <a
+                class="nav-link"
+                href="/about"
+                @click.prevent="$emit('scroll', 'about')"
+                :class="{ 'text-light': nightMode }"
+                >About</a
               >
             </li>
             <li class="nav-item mx-2">
@@ -123,7 +123,7 @@ export default {
 .nav-link {
   font-weight: 500;
 }
-.nav-link:hover{
+.nav-link:hover {
   background-color: rgba(160, 159, 159, 0.336);
 }
 

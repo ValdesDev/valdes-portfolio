@@ -2,10 +2,10 @@
   <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
     <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
     <div class="parent">
-      <Home  :nightMode="nightMode" />
-      <About id="about" :nightMode="nightMode" />
+      <Home :nightMode="nightMode"/>
       <Skills id="skills" :nightMode="nightMode" />
       <Portfolio id="portfolio" :nightMode="nightMode" />
+      <About id="about" :nightMode="nightMode" />
       <Contact id="contact" :nightMode="nightMode" />
       <Footer :nightMode="nightMode" />
     </div>
@@ -21,10 +21,11 @@ import Portfolio from "./sections/Portfolio";
 import Contact from "./sections/Contact";
 import Footer from "./components/layout/Footer";
 
-import info from "../info";
+import info from "./../info";
 
 export default {
   name: "App",
+
   components: {
     Navbar,
     Home,
@@ -34,17 +35,20 @@ export default {
     Contact,
     Footer,
   },
+
   data() {
     return {
       nightMode: false,
       config: info.config,
     };
   },
+
   created() {
     if (this.config.use_cookies) {
       this.nightMode = this.$cookie.get("nightMode") === "true" ? true : false;
     }
   },
+  
   mounted() {
     ["about", "contact", "skills", "portfolio"].forEach((l) => {
       if (window.location.href.includes(l)) {
@@ -53,6 +57,7 @@ export default {
       }
     });
   },
+
   methods: {
     switchMode(mode) {
       if (this.config.use_cookies) {

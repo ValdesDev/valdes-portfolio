@@ -1,7 +1,7 @@
 let info = {
-  name: "Mahy Mohab",
-  logo_name: "Mahy",
-  flat_picture: require("./src/assets/portrait.png"),
+  name: "José Luis Valdés Gómez",
+  logo_name: "José Luis Valdés",
+  flat_picture: require("./src/assets/Pepe1.jpg"),
   config: {
     use_cookies: true,
     navbar: {
@@ -9,13 +9,10 @@ let info = {
     },
   },
   description:
-    "I'm Mahy Mohab, A senior Software Engineering student at KFS University with an interest in Software Development, UI/UX Design and Front-end developing. ",
+    "I'm José Luis, a Frontend developer specialized in <b>Javascript, React, NodeJS, HTML, CSS</b>. Dynamic, proactive and motivated. Seeking an opportunity to expand my programming and profesional skills. ",
   links: {
-    linkedin: "www.linkedin.com/in/mahy-mohab-209",
-    github: "https://github.com/mahy209",
-    behance: "https://www.behance.net/mahymohab",
-    resume:
-      "https://drive.google.com/file/d/1yrJjc6q-X29qiW_UupooSq1hMTEwJLZ6/view?usp=sharing",
+    linkedin: "https://www.linkedin.com/in/jose-luis-valdes-frontend",
+    github: "https://github.com/ValdesDev",
   },
   education: [
     {

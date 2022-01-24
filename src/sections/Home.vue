@@ -37,20 +37,6 @@
             >
               <i class="fab fa-github"></i>
             </button>
-            <button
-              class="btn btn-outline-secondary mx-2"
-              @click="open('behance')"
-              v-tooltip.bottom="'behance'"
-            >
-              <i class="fab fa-behance"></i>
-            </button>
-            <button
-              class="btn btn-outline-secondary mx-2"
-              @click="open('resume')"
-              v-tooltip.bottom="'Resume'"
-            >
-              <i class="fa fa-file"></i>
-            </button>
           </div>
         </div>
       </div>
@@ -74,14 +60,11 @@ export default {
     return {
       picture: info.flat_picture,
       description: info.description,
-      name: info.name,
       linkedin: info.links.linkedin,
-      github: info.links.github,
-      behance: info.links.behance,
-      resume: info.links.resume
+      github: info.links.github
     };
   },
-  
+
   methods: {
     open(link) {
       switch (link) {
@@ -90,12 +73,6 @@ export default {
           break;
         case "github":
           window.open(this.github, "_blank");
-          break;
-        case "behance":
-          window.open(this.behance, "_blank");
-          break;
-        case "resume":
-          window.open(this.resume, "_blank");
           break;
       }
     },
@@ -110,7 +87,7 @@ export default {
 }
 
 img {
-  max-width: 800px;
+  max-width: 500px;
   max-height: 500px;
   margin-top: 80px;
   transform: rotateY(180deg);
@@ -133,19 +110,19 @@ img {
 }
 
 .btn {
-  border-color: #759CC9;
-  color: #759CC9;
+  border-color: #759cc9;
+  color: #759cc9;
 }
 
 .btn:hover {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #759cc9;
+  border-color: #759cc9;
   color: white;
 }
 
 .btn:focus {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #759cc9;
+  border-color: #759cc9;
   color: white;
 }
 

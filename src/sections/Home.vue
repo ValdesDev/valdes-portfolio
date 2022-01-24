@@ -61,18 +61,15 @@
 <script>
 import info from "../../info";
 
-import Wave from "./helpers/Wave";
-
 export default {
   name: "Home",
-  components: {
-    Wave,
-  },
+
   props: {
     nightMode: {
       type: Boolean,
     },
   },
+
   data() {
     return {
       picture: info.flat_picture,
@@ -84,6 +81,7 @@ export default {
       resume: info.links.resume
     };
   },
+  
   methods: {
     open(link) {
       switch (link) {

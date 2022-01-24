@@ -115,7 +115,7 @@
 import config from "../../config";
 import emailjs from "emailjs-com";
 
-import Snackbar from "./helpers/Snackbar";
+import Snackbar from "../components/Snackbar";
 
 export default {
   name: "Contact",

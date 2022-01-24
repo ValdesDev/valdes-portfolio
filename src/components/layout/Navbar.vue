@@ -91,8 +91,8 @@
 </template>
 
 <script>
-import Logo from "./helpers/Logo";
-import info from "../../info";
+import Logo from "../Logo";
+import info from "../../../info";
 
 export default {
   name: "Navbar",

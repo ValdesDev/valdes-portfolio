@@ -37,7 +37,7 @@
 </template>
 
 <script>
-import Timeline from "./helpers/Timeline";
+import Timeline from "../components/Timeline";
 import info from "../../info";
 
 export default {

@@ -10,7 +10,7 @@
 </template>
 
 <script>
-import info from "../../../info";
+import info from "../../info";
 
 export default {
   name: "Logo",

@@ -2,7 +2,7 @@
   <div id="app" :class="{ 'text-dark': !nightMode, 'text-light': nightMode }">
     <Navbar @scroll="scrollTo" @nightMode="switchMode" :nightMode="nightMode" />
     <div class="parent">
-      <Home :nightMode="nightMode" />
+      <Home  :nightMode="nightMode" />
       <About id="about" :nightMode="nightMode" />
       <Skills id="skills" :nightMode="nightMode" />
       <Portfolio id="portfolio" :nightMode="nightMode" />
@@ -13,13 +13,13 @@
 </template>
 
 <script>
-import Navbar from "./components/Navbar.vue";
-import Home from "./components/Home";
-import About from "./components/About";
-import Skills from "./components/Skills";
-import Portfolio from "./components/Portfolio";
-import Contact from "./components/Contact";
-import Footer from "./components/Footer";
+import Navbar from "./components/layout/Navbar";
+import Home from "./sections/Home";
+import About from "./sections/About";
+import Skills from "./sections/Skills";
+import Portfolio from "./sections/Portfolio";
+import Contact from "./sections/Contact";
+import Footer from "./components/layout/Footer";
 
 import info from "../info";
 

@@ -131,10 +131,9 @@
 </template>
 
 <script>
-import Card from "./helpers/Card";
-import Modal from "./helpers/Modal";
-import DesignModal from "./helpers/DesignModal";
-import Carousel from "./helpers/Carousel";
+import Card from "../components/Card";
+import Modal from "../components/Modal";
+import DesignModal from "../components/DesignModal";
 import info from "../../info";
 
 import { VueTabs, VTab } from "vue-nav-tabs";

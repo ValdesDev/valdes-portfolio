@@ -63,14 +63,20 @@
                 >{{ tech }}</span
               >
             </div>
-
+            
+            <div class="portfolio-actions">
+            <a :href="design.visit" target="_blank">
+              <button    class="btn-sm btn btn-outline-secondary no-outline btn-portfolio">
+                <i class="fa fa-external-link-alt"></i>
+              </button>
+            </a>
             <button
-              style="height: 31px; margin-top: 5px;"
-              class="btn-sm btn btn-outline-secondary no-outline"
+              class="btn-sm btn btn-outline-secondary no-outline btn-portfolio"
               @click.prevent="showDesignModalFn(design)"
             >
              read more
             </button>
+            </div>
           </div>
         </div>
       </div>
@@ -268,5 +274,15 @@ export default {
   font-size: 14px;
   font-weight: 400;
   opacity: 0.75;
+}
+
+.portfolio-actions {
+  white-space: nowrap;
+  }
+
+.btn-portfolio {
+  height: 31px; 
+  margin-top: 5px;
+  margin-left: 5px;
 }
 </style>

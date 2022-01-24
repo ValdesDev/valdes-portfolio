@@ -94,34 +94,34 @@ let info = {
   ],
   skills: [
     {
-      title: "Language",
-      info: ["Python", "Javascript", "TypeScript", "Java", "C#"],
-      icon: "fa fa-code",
+      title: "Javascript",
+      info: ["ES6", "SOLID Principles", "JQuery"],
+      image: require("./src/assets/logos/JavaScript_logo.png"),
     },
     {
-      title: "Front-end",
-      info: ["HTML5", "CSS3", "Bootstrap3", "JQuery", "Es6", "json"],
-      icon: "fa fa-cubes",
+      title: "React",
+      info: ["Material UI", "Boostrap", "React Hooks"],
+      image: require("./src/assets/logos/React-logo.png"),
     },
     {
-      title: "web technologies",
-      info: ["Vue", "React", "Node"],
-      icon: "fas fa-laptop-code",
+      title: "CSS/SCSS",
+      info: ["CSS3", "SASS", "HTML5"],
+      image: require("./src/assets/logos/CSS-logo.png"),
     },
     {
-      title: "Databases",
-      info: ["MongoDB", "MySQL", "SQL Server"],
-      icon: "fa fa-database",
+      title: "Node JS",
+      info: ["Express JS", "Postman", "Web API"],
+      image: require("./src/assets/logos/Node-logo.png"),
     },
     {
-      title: "Operating systems & tools",
-      info: ["Ubuntu", "Windows", "Agile", "Scrum", "JIRA", "Firebase"],
-      icon: "fas fa-tools",
+      title: "MongoDB",
+      info: ["Mongoose", "Database Design"],
+      image: require("./src/assets/logos/Mongo-logo.png"),
     },
     {
-      title: "Design",
-      info: ["Illustrator", "XD", "Photoshop", "Gimp"],
-      icon: "fa fa-pencil-square-o",
+      title: "Git",
+      info: ["GitHub", "Gitflow", "CI"],
+      image: require("./src/assets/logos/Git-logo.png"),
     },
   ],
   portfolio: [
@@ -171,7 +171,7 @@ let info = {
       github: "https://github.com/mahy209/online-examination.git",
       visit: "https://github.com/mahy209/online-examination.git",
       description:
-      "This project is a psychologist agenda, to unified your clients and take a control for your appointments."
+        "This project is a psychologist agenda, to unified your clients and take a control for your appointments.",
     },
     {
       name: "MyFlix.com",

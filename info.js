@@ -124,141 +124,65 @@ let info = {
       image: require("./src/assets/logos/Git-logo.png"),
     },
   ],
-  portfolio: [
-    {
-      name: "TimeLine",
-      pictures: [
-        {
-          img: require("./src/assets/portfolio/diary/1.png"),
-        },
-        {
-          img: require("./src/assets/portfolio/diary/2.png"),
-        },
-        {
-          img: require("./src/assets/portfolio/diary/3.png"),
-        },
-      ],
-      technologies: ["javascript", "css", "local storage"],
-      category: "Web App",
-      date: "Aug, 2021 - 20 days",
-      github: "https://github.com/mahy209/notes-react-app.git",
-      visit: "https://github.com/mahy209/notes-react-app.git",
-      description:
-        " Timeline is an online version of a boardgame with the same name. You can check rules and get more info about it here: https://boardgamegeek.com/boardgame/128664/timeline",
-    },
-    {
-      name: "Consulta",
-      pictures: [
-        {
-          img: require("./src/assets/portfolio/online examination/exam (1).png"),
-        },
-        {
-          img: require("./src/assets/portfolio/online examination/exam (2).png"),
-        },
-        {
-          img: require("./src/assets/portfolio/online examination/exam (3).png"),
-        },
-        {
-          img: require("./src/assets/portfolio/online examination/exam (4).png"),
-        },
-        {
-          img: require("./src/assets/portfolio/online examination/exam (5).png"),
-        },
-      ],
-      technologies: ["HTML", "CSS", "JavaSript", "JQuery", "PHP", "MySQL"],
-      category: "Web App",
-      date: "Apr, 2021 - May, 2021",
-      github: "https://github.com/mahy209/online-examination.git",
-      visit: "https://github.com/mahy209/online-examination.git",
-      description:
-        "This project is a psychologist agenda, to unified your clients and take a control for your appointments.",
-    },
-    {
-      name: "MyFlix.com",
-      pictures: [
-        {
-          img: require("./src/assets/portfolio/myflix.com/1.png"),
-        },
-        {
-          img: require("./src/assets/portfolio/myflix.com/2.png"),
-        },
-        {
-          img: require("./src/assets/portfolio/myflix.com/3.png"),
-        },
-        {
-          img: require("./src/assets/portfolio/myflix.com/4.png"),
-        },
-      ],
-      technologies: ["react", "css", "TMDB"],
-      category: "Web App",
-      date: "Aug, 2021 - 10 days",
-      github: "https://github.com/mahy209/MyFlix-react-app.git",
-      visit: "https://github.com/mahy209/MyFlix-react-app.git",
-      description:
-        " flix.com is a netflix clone using React JS and TMDB with courusal and search engine. ",
-    },
-  ],
+
   portfolio_design: [
     {
-      name: "Examia",
-      title: "Online Examination - UI Design",
+      name: "TimeLine",
+      title: "TimeLine - Vanilla JavaScript Game",
       pictures: [
         {
-          img: require("./src/assets/designs/online examination/exam (2).png"),
-          title: "MoodBoard",
+          img: require("./src/assets/designs/timeline/TimeLine1.png"),
+          title: "TimeLine",
         },
         {
-          img: require("./src/assets/designs/online examination/exam (1).png"),
-          title: "Mockups 1",
+          img: require("./src/assets/designs/timeline/TimeLine3.png"),
+          title: "Flip effects",
         },
         {
-          img: require("./src/assets/designs/online examination/exam (3).png"),
-          title: "Mockups 2",
-        },
-        {
-          img: require("./src/assets/designs/online examination/exam (4).png"),
-          title: "App Elements",
-        },
-        {
-          img: require("./src/assets/designs/online examination/exam (5).png"),
-          title: "App Elements",
-        },
-        {
-          img: require("./src/assets/designs/online examination/exam (6).png"),
-          title: "App Elements",
+          img: require("./src/assets/designs/timeline/TimeLine2.png"),
+          title: "Rules",
         },
       ],
-      technologies: ["XD", "Photoshop"],
-      category: "Visual Design",
-      github: "",
-      date: "Jan, 2021 - Feb, 2021",
-      visit: "",
+      technologies: ["JavaScript", "DOM", "CSS", "Animations"],
+      category: "Vanilla JavaScript Game",
+      github: "https://github.com/ValdesDev/Timeline",
+      visit: "https://valdesdev.github.io/Timeline/",
       description:
-        " Examia is a open source project , <br> <br> with Ui/UX design and full stack developing(HTML/CSS/JQuery/PHP).",
+        "<p> Timeline is an online version of a boardgame with the same name.</p>"
+        + "<p>In this version, all the cards are from spanish history events.</p>"
+        + "<p>General rules: You have to choose a card and put in in the correct place of the time line. If you fail three times putting the card, the game ends. </p>"
+        + "<p>Have fun!</p>",
     },
     {
-      name: "Pill Reminder",
-      title: "Pill Reminder - Mockup Design",
+      name: "Psychological Agenda",
+      title: "Psychological Agenda - Web App",
       pictures: [
         {
-          img: require("./src/assets/designs/pill reminder/Web 1.png"),
-          title: "Moodboard",
+          img: require("./src/assets/designs/agenda/1.png"),
+          title: "Página de bienvenida",
         },
         {
-          img: require("./src/assets/designs/pill reminder/1.png"),
-          title: "Mockups 1",
+          img: require("./src/assets/designs/agenda/3.png"),
+          title: "Calendario",
         },
         {
-          img: require("./src/assets/designs/pill reminder/2.png"),
-          title: "Mockups 2",
+          img: require("./src/assets/designs/agenda/Web 1.png"),
+          title: "Gestión de citas",
         },
+        {
+          img: require("./src/assets/designs/agenda/2.png"),
+          title: "Archivo de clientes",
+        }
       ],
-      technologies: ["XD", "Illustrator"],
-      category: "Visual Design",
-      github: "",
-      date: "Apr, 2021 - Apr, 2021",
-      visit: "",
-      description: "pill reminder app for nessecary drugs for the day.",
+      technologies: ["JavaScript", "Bootstrap", "CSS", "Node", "Express", "MongoDB" ],
+      category: "Scheduler Web App",
+      github: "https://github.com/ValdesDev/Psychological-Agenda",
+      visit: "https://psychology-clinic.herokuapp.com/",
+      description: 
+        "<p>This project is a psychologist agenda, to unified your clients and take a control fo your appointments. Taking advantage of my previous experiencie, "
+        + "I created a calendar view to make it easy to manage your appointments. </p>"
+        + "<p>Beside that, there's also a landing page where you find out more about the webiste, and take in contact with administration.</p>"
+      + "<p>The project is ready to manage several psychologists and different clients.</p>",
     },
     {
       name: "Taxes Burger",

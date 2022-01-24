@@ -17,7 +17,7 @@
         <span
           class="title text-center"
           :class="{ pgray: !nightMode, 'text-light': nightMode }"
-          >Portfolio.</span
+          >Projects</span
         >
       </div>
       <hr
@@ -25,99 +25,57 @@
         :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"
       />
 
-      <vue-tabs :activeTextColor="!nightMode ? '#535A5E' : '#dfdfdf'">
-        <v-tab title="development">
-          <br />
-          <div class="row">
-            <div
-              class="col-xl-4 col-bg-4 col-md-6 col-sm-12"
-              v-for="(portfolio, idx) in portfolio_info"
-              :key="portfolio.name"
-            >
-              <Card
-                :style="{ 'transition-delay': (idx % 3) / 4.2 + 's' }"
-                :portfolio="portfolio"
-                @show="showModalFn"
-                data-aos="fade-up"
-                :nightMode="nightMode"
-                data-aos-offset="100"
-                data-aos-delay="10"
-                data-aos-duration="500"
-                data-aos-easing="ease-in-out"
-                data-aos-mirror="true"
-                data-aos-once="true"
-              />
-            </div>
-          </div>
-          <div class="text-center py-3" v-if="showBtn !== 'show less'">
-            <button class="btn" @click.prevent="showMore">{{ showBtn }}</button>
-          </div>
-        </v-tab>
-
-        <v-tab title="design">
-          <div class="row">
-            <div
-              v-for="(design, idx) in desgin_info"
-              :key="idx"
-              :class="{ 'mt-4': idx === 0 ? true : true }"
-              class="col-xl-6 col-bg-6 col-md-12 col-sm-12"
-              style="position: relative;"
-            >
-              <vueper-slides
-                :dragging-distance="50"
-                fixed-height="300px"
-                :bullets="false"
-                slide-content-outside="bottom"
-                style="position: aboslute"
-                  @click.prevent="showDesignModalFn(design)"
-
-              >
-                <vueper-slide
-                  v-for="(slide, i) in design.pictures"
-                  :key="i"
-                  :image="slide.img"
-                />
-              </vueper-slides>
-              <div
-                style="width: 100%; display: flex; justify-content: space-between"
-                class="mt-2"
-              >
-                <div>
-                  <div class="title2" style="font-weight: 500;">{{ design.title }}</div>
-                  <span
-                    class="badge mr-2 mb-2"
-                    v-for="tech in design.technologies"
-                    :key="tech"
-                    :class="{ 'bg-dark4': nightMode }"
-                    >{{ tech }}</span
-                  >
-                  •
-                  <span class="date ml-1">{{design.date}}</span>
-                </div>
-
-                <button
-                  style="height: 31px; margin-top: 5px;"
-                  class="btn-sm btn btn-outline-secondary no-outline"
-                  @click.prevent="showDesignModalFn(design)"
-                >
-                  read more
-                </button>
+      <div class="row">
+        <div
+          v-for="(design, idx) in desgin_info"
+          :key="idx"
+          :class="{ 'mt-4': idx === 0 ? true : true }"
+          class="col-xl-6 col-bg-6 col-md-12 col-sm-12"
+          style="position: relative;"
+        >
+          <vueper-slides
+            :dragging-distance="50"
+            fixed-height="300px"
+            :bullets="false"
+            slide-content-outside="bottom"
+            style="position: aboslute"
+            @click.prevent="showDesignModalFn(design)"
+          >
+            <vueper-slide
+              v-for="(slide, i) in design.pictures"
+              :key="i"
+              :image="slide.img"
+            />
+          </vueper-slides>
+          <div
+            style="width: 100%; display: flex; justify-content: space-between"
+            class="mt-2"
+          >
+            <div>
+              <div class="title2" style="font-weight: 500;">
+                {{ design.title }}
               </div>
+              <span
+                class="badge mr-2 mb-2"
+                v-for="tech in design.technologies"
+                :key="tech"
+                :class="{ 'bg-dark4': nightMode }"
+                >{{ tech }}</span
+              >
             </div>
+
+            <button
+              style="height: 31px; margin-top: 5px;"
+              class="btn-sm btn btn-outline-secondary no-outline"
+              @click.prevent="showDesignModalFn(design)"
+            >
+             read more
+            </button>
           </div>
-          <br />
-        </v-tab>
-      </vue-tabs>
+        </div>
+      </div>
+      <br />
     </div>
-    <transition name="modal">
-      <Modal
-        :showModal="showModal"
-        @close="closeModal"
-        v-if="showModal"
-        :portfolio="modal_info"
-        :nightMode="nightMode"
-      />
-    </transition>
     <transition name="modal">
       <DesignModal
         :showModal="showDesignModal"
@@ -131,13 +89,8 @@
 </template>
 
 <script>
-import Card from "../components/Card";
-import Modal from "../components/Modal";
 import DesignModal from "../components/DesignModal";
 import info from "../../info";
-
-import { VueTabs, VTab } from "vue-nav-tabs";
-import "vue-nav-tabs/themes/vue-tabs.css";
 
 import { VueperSlides, VueperSlide } from "vueperslides";
 import "vueperslides/dist/vueperslides.css";
@@ -145,10 +98,6 @@ import "vueperslides/dist/vueperslides.css";
 export default {
   name: "Portfolio",
   components: {
-    Card,
-    Modal,
-    VueTabs,
-    VTab,
     VueperSlides,
     VueperSlide,
     DesignModal,
@@ -160,16 +109,9 @@ export default {
   },
   data() {
     return {
-      all_info: info.portfolio,
       desgin_info: info.portfolio_design,
-      portfolio_info: [],
-      showModal: false,
       showDesignModal: false,
-      modal_info: {},
       design_modal_info: {},
-      number: 3,
-      showBtn: "show more",
-      shower: 0,
       data: [
         '<div class="example-slide">Slide 1</div>',
         '<div class="example-slide">Slide 2</div>',
@@ -177,63 +119,21 @@ export default {
       ],
     };
   },
-  created() {
-    for (var i = 0; i < this.number; i++) {
-      this.portfolio_info.push(this.all_info[i]);
-    }
-  },
-  watch: {
-    number() {
-      this.portfolio_info = [];
-      for (var i = 0; i < this.number; i++) {
-        this.portfolio_info.push(this.all_info[i]);
-      }
-    },
-  },
+
   methods: {
     next() {
       this.$refs.flickity.next();
     },
-
     previous() {
       this.$refs.flickity.previous();
     },
     closeModal() {
-      this.showModal = false;
       this.showDesignModal = false;
       document.getElementsByTagName("body")[0].classList.remove("modal-open");
-    },
-    showModalFn(portfolio) {
-      this.modal_info = portfolio;
-      this.showModal = true;
     },
     showDesignModalFn(design_portfolio) {
       this.design_modal_info = design_portfolio;
       this.showDesignModal = true;
-    },
-    showMore() {
-      if (this.number != this.all_info.length) {
-        this.number += 3;
-
-        window.scrollBy({
-          top: document.getElementsByClassName("smcard")[0].clientHeight,
-          behavior: "smooth",
-        });
-
-        if (this.number > this.all_info.length)
-          this.number = this.all_info.length;
-      }
-
-      if (this.number == this.all_info.length && this.shower == 0) {
-        this.shower = 1;
-        this.showBtn = "show less";
-      } else if (this.number == this.all_info.length && this.shower == 1) {
-        var elementPosition = document.getElementById("portfolio").offsetTop;
-        window.scrollTo({ top: elementPosition + 5, behavior: "smooth" });
-        this.shower = 0;
-        this.number = 3;
-        this.showBtn = "show more";
-      }
     },
   },
 };
@@ -276,6 +176,7 @@ export default {
 .btn {
   border-color: #8585ad;
   color: #8585ad;
+  white-space: nowrap;
 }
 
 .btn:hover {
@@ -288,56 +189,6 @@ export default {
   background-color: #8585ad;
   border-color: #8585ad;
   color: white;
-}
-
-/deep/ .vue-tabs .nav-tabs {
-  border: none;
-  font-size: 20px;
-  font-weight: 500;
-  display: flex;
-
-  justify-content: center;
-}
-
-/deep/ .vue-tabs .tabs__link {
-  color: #a0a0a0;
-}
-
-/deep/ .vue-tabs .nav-tabs > li.active > a {
-  background: transparent;
-  border: none;
-  transition: all 0.5s;
-  padding-right: 0;
-  padding-left: 0;
-  margin-right: 15px;
-  margin-left: 15px;
-}
-
-/deep/ .vue-tabs .nav-tabs > li > a:hover {
-  background: transparent;
-  color: #cbcbcb;
-  transition: all 0.5s;
-}
-
-/deep/ .vue-tabs .nav-tabs > li > a {
-  background: transparent;
-  border: none;
-  transition: all 0.5s;
-}
-
-/deep/ .vue-tabs .nav-tabs > li > a:after {
-  content: "";
-  width: 20%;
-  position: absolute;
-  bottom: 3px;
-  border-width: 0 0 2px;
-  border-style: solid;
-  transition: all 0.5s;
-}
-
-/deep/ .vue-tabs .nav-tabs > li.active > a:after {
-  width: 100%;
-  transition: all 0.5s;
 }
 
 .design-img {
@@ -381,19 +232,19 @@ export default {
 }
 
 .btn {
-  border-color: #759CC9;
-  color: #759CC9;
+  border-color: #759cc9;
+  color: #759cc9;
 }
 
 .btn:hover {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #759cc9;
+  border-color: #759cc9;
   color: white;
 }
 
 .btn:focus {
-  background-color: #759CC9;
-  border-color: #759CC9;
+  background-color: #759cc9;
+  border-color: #759cc9;
   color: white;
 }
 /deep/ .vueperslides__arrow {
@@ -416,6 +267,6 @@ export default {
 .date {
   font-size: 14px;
   font-weight: 400;
-  opacity: 0.75
+  opacity: 0.75;
 }
 </style>

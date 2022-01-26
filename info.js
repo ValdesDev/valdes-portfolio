@@ -3,7 +3,7 @@ let info = {
   logo_name: "José Luis Valdés",
   flat_picture: require("./src/assets/Pepe1.jpg"),
   config: {
-    use_cookies: true,
+    use_cookies: false,
     navbar: {
       blur: false,
     },

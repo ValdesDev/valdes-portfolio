@@ -148,10 +148,10 @@ let info = {
       github: "https://github.com/ValdesDev/Timeline",
       visit: "https://valdesdev.github.io/Timeline/",
       description:
-        "<p> Timeline is an online version of a boardgame with the same name.</p>"
-        + "<p>In this version, all the cards are from spanish history events.</p>"
-        + "<p>General rules: You have to choose a card and put in in the correct place of the time line. If you fail three times putting the card, the game ends. </p>"
-        + "<p>Have fun!</p>",
+        "<p> Timeline is an online version of a boardgame with the same name.</p>" +
+        "<p>In this version, all the cards are from spanish history events.</p>" +
+        "<p>General rules: You have to choose a card and put in in the correct place of the time line. If you fail three times putting the card, the game ends. </p>" +
+        "<p>Have fun!</p>",
     },
     {
       name: "Psychological Agenda",
@@ -159,58 +159,71 @@ let info = {
       pictures: [
         {
           img: require("./src/assets/designs/agenda/1.png"),
-          title: "Página de bienvenida",
+          title: "Landing page",
         },
         {
           img: require("./src/assets/designs/agenda/3.png"),
-          title: "Calendario",
+          title: "Calendar",
         },
         {
           img: require("./src/assets/designs/agenda/Web 1.png"),
-          title: "Gestión de citas",
+          title: "Appointments",
         },
         {
           img: require("./src/assets/designs/agenda/2.png"),
-          title: "Archivo de clientes",
-        }
+          title: "Client management",
+        },
       ],
-      technologies: ["JavaScript", "Bootstrap", "CSS", "Node", "Express", "MongoDB" ],
+      technologies: [
+        "JavaScript",
+        "Bootstrap",
+        "CSS",
+        "Node",
+        "Express",
+        "MongoDB",
+      ],
       category: "Scheduler Web App",
       github: "https://github.com/ValdesDev/Psychological-Agenda",
       visit: "https://psychology-clinic.herokuapp.com/",
-      description: 
-        "<p>This project is a psychologist agenda, to unified your clients and take a control fo your appointments. Taking advantage of my previous experiencie, "
-        + "I created a calendar view to make it easy to manage your appointments. </p>"
-        + "<p>Beside that, there's also a landing page where you find out more about the webiste, and take in contact with administration.</p>"
-      + "<p>The project is ready to manage several psychologists and different clients.</p>",
+      description:
+        "<p>This project is a psychologist agenda, to unified your clients and take a control fo your appointments. Taking advantage of my previous experiencie, " +
+        "I created a calendar view to make it easy to manage your appointments. </p>" +
+        "<p>Beside that, there's also a landing page where you find out more about the webiste, and take in contact with administration.</p>" +
+        "<p>The project is ready to manage several psychologists and different clients.</p>",
     },
     {
-      name: "Taxes Burger",
-      title: "Taxes Burger - UI design",
+      name: "Grouping-HR-App",
+      title: "HR Management - Dashboard",
       pictures: [
         {
-          img: require("./src/assets/designs/burger/Web 1 (1).jpg"),
-          title: "Moodboard",
+          img: require("./src/assets/designs/grouping/Web 1 (1).png"),
+          title: "Landing page",
         },
         {
-          img: require("./src/assets/designs/burger/Web 1 (1).png"),
-          title: "Mockup 1",
+          img: require("./src/assets/designs/grouping/Web 1 (2).png"),
+          title: "Time off requests",
         },
         {
-          img: require("./src/assets/designs/burger/Web 1 (2).png"),
-          title: "Mockup 2",
+          img: require("./src/assets/designs/grouping/Web 1 (3).png"),
+          title: "HR Calendar",
         },
         {
-          img: require("./src/assets/designs/burger/Web 1 (3).png"),
-          title: "Mockup 3",
+          img: require("./src/assets/designs/grouping/Web 1 (4).png"),
+          title: "Clock in and out",
         },
       ],
-      technologies: ["XD", "Illustrator"],
-      category: "Visual Design",
-      github: "",
-      date: "May, 2021 - May, 2021",
-      visit: "",
-      description: " Burger restuarant UI design",
+      technologies: ["React", "JavaScript", "CSS", "MUI", "Node"],
+      category: "MERN Project",
+      github: "https://github.com/ValdesDev/HR-App",
+      visit: "https://grouping-rh.herokuapp.com",
+      description:
+        "<p>Grouping is a software focus on automatize HR tasks. User can manage employee's holidays and sick leaves and track working hours.</p>" +
+        " <ul> " +
+        "<li><strong>Time Off:</strong> Manage time off requests from employees.</li>" +
+        "<li><strong>Time Tracking:</strong> Daily clock in/out and work time table reports.</li>" +
+        "<li><strong>Task Management:</strong> Track employee's tasks.</li>" +
+        "<li><strong>Employees &amp; Company portal:</strong> Different access and roles.</li>" +
+        "</ul>",
     },
   ],
 };

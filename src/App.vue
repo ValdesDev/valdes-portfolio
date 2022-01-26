@@ -5,7 +5,7 @@
       <Home :nightMode="nightMode"/>
       <Skills id="skills" :nightMode="nightMode" />
       <Portfolio id="portfolio" :nightMode="nightMode" />
-      <About id="about" :nightMode="nightMode" />
+      <!-- <About id="about" :nightMode="nightMode" /> -->
       <Contact id="contact" :nightMode="nightMode" />
       <Footer :nightMode="nightMode" />
     </div>
@@ -15,7 +15,6 @@
 <script>
 import Navbar from "./components/layout/Navbar";
 import Home from "./sections/Home";
-import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Portfolio from "./sections/Portfolio";
 import Contact from "./sections/Contact";
@@ -29,7 +28,6 @@ export default {
   components: {
     Navbar,
     Home,
-    About,
     Skills,
     Portfolio,
     Contact,
@@ -38,7 +36,7 @@ export default {
 
   data() {
     return {
-      nightMode: false,
+      nightMode: true,
       config: info.config,
     };
   },

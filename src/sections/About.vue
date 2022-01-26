@@ -3,7 +3,7 @@
     class="py-4 p-st"
     :class="{
       'bg-light': !nightMode,
-      'bg-dark2': nightMode,
+      'bg-dark': nightMode,
       'text-light': nightMode,
     }"
   >

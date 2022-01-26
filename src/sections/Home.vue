@@ -61,7 +61,7 @@ export default {
       picture: info.flat_picture,
       description: info.description,
       linkedin: info.links.linkedin,
-      github: info.links.github
+      github: info.links.github,
     };
   },
 
@@ -88,12 +88,12 @@ export default {
 
 img {
   max-width: 500px;
-  height: 100%;
-  max-height: 500px;
+  width: 100%;
+  max-height: 340px;
   margin-bottom: 18px;
   transform: rotateY(180deg);
-
-  border-radius: 35px;;
+  border-radius: 35px;
+  object-fit: cover;
 }
 
 @media only screen and (max-width: 580px) {

@@ -1,5 +1,5 @@
 <template>
-  <div :class="{ 'bg-white': !nightMode, 'bg-dark': nightMode }" class="p-st">
+  <div :class="{ 'bg-white': !nightMode, 'bg-dark2': nightMode }" class="p-st">
     <div class="container py-4">
       <div
         class="text-center"
@@ -10,7 +10,7 @@
         <span
           class="title text-center"
           :class="{ pgray: !nightMode, 'text-light': nightMode }"
-          >Skills</span
+          >{{ learning ? "In Progress" : "Skills" }}</span
         >
       </div>
       <hr
@@ -32,13 +32,21 @@
           data-aos-mirror="true"
           data-aos-once="true"
         >
-          <div class="bg-div"><img :src="skill.image" /></div>
+          <div class="bg-div skill">
+            <img :src="skill.image" />
+            <span v-if="skill.learning" class="tag">
+              <img :src="comingIcon" />
+            </span>
+          </div>
           <div class="title2 pt-2">{{ skill.title }}</div>
           <hr
+            v-if="skill.info"
             width="50%"
             :class="{ pgray: !nightMode, 'bg-secondary': nightMode }"
           />
-          <span class="title3">{{ skill.info.join(", ") }}</span>
+          <span class="title3" v-if="skill.info">{{
+            skill.info.join(", ")
+          }}</span>
         </div>
       </div>
     </div>
@@ -58,18 +66,44 @@ export default {
   data() {
     return {
       skills: info.skills,
+      comingIcon: require("../assets/logos/Coming-logo.png"),
     };
   },
 };
 </script>
 
 <style scoped>
+.skill {
+  position: relative;
+}
+
+.tag {
+  position: absolute;
+  right: 30%;
+  top: 17%;
+  transform: rotate(-15deg);
+}
+
+body .tag img {
+  width: 50px;
+  opacity: 0.9;
+  filter: saturate(0.8);
+}
+
+.tag:hover {
+  transform: rotate(0);
+}
 
 .bg-div img {
   height: 64px;
   width: 64px;
   object-fit: contain;
-  }
+}
+
+.bg-div img:hover {
+  height: 70px;
+  width: 70px;
+}
 
 .title {
   font-size: 30px;

@@ -105,7 +105,7 @@ let info = {
     },
     {
       title: "CSS/SCSS",
-      info: ["CSS3", "SASS", "HTML5"],
+      info: ["CSS3", "Sass", "HTML5", "Responsive"],
       image: require("./src/assets/logos/CSS-logo.png"),
     },
     {
@@ -122,6 +122,16 @@ let info = {
       title: "Git",
       info: ["GitHub", "Gitflow", "CI"],
       image: require("./src/assets/logos/Git-logo.png"),
+    },
+    {
+      title: "Vue",
+      image: require("./src/assets/logos/Vue-logo.png"),
+      learning: true,
+    },
+    {
+      title: "Redux",
+      image: require("./src/assets/logos/Redux-logo.png"),
+      learning: true,
     },
   ],
 

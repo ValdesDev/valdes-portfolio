@@ -97,8 +97,8 @@ let info = {
       github: "https://github.com/ValdesDev/Timeline",
       visit: "https://valdesdev.github.io/Timeline/",
       description:
-        "<p> Timeline is an online version of a boardgame with the same name.</p>" +
-        "<p>In this version, all the cards are from spanish history events.</p>" +
+        "<p> Timeline is an online version of a board game with the same name.</p>" +
+        "<p>In this version, all the cards are from Spanish history events.</p>" +
         "<p>General rules: You have to choose a card and put in in the correct place of the time line. If you fail three times putting the card, the game ends. </p>" +
         "<p>Have fun!</p>",
     },

@@ -31,67 +31,6 @@ let info = {
       ],
     },
   ],
-  experience: [
-    {
-      name: "MONT",
-      place: "Kafr elSheikh, Egypt",
-      date: "July, 2021 - currently",
-      position: "ReactJS Engineer",
-      description: "",
-      skills: [
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-        "JQuery",
-        "Json",
-        "JavaSript",
-        "TypeSript",
-        "es6",
-        "VueJS",
-      ],
-    },
-    {
-      name: "ITI",
-      place: "Kafr elSheikh, Egypt",
-      date: "1,sep, 2021 - 28,sep, 2021",
-      position: "VueJS web developer",
-      description: "",
-      skills: [
-        "HTML5",
-        "CSS3",
-        "Bootstrap",
-        "JQuery",
-        "Json",
-        "JavaSript",
-        "TypeSript",
-        "es6",
-        "VueJS",
-      ],
-    },
-    {
-      name: "Udacity",
-      place: "Egypt",
-      date: "jun, 2021 - sep, 2021",
-      position: "React Web Developer",
-      description: "",
-      skills: [
-        "Javascript",
-        "Typescript",
-        "ReactJS",
-        "React-Redux",
-        "webpack",
-        "NLP",
-      ],
-    },
-    {
-      name: "IEEE",
-      place: "Alexandria, Egypt",
-      date: "Jan, 2020 - Feb, 2020",
-      position: "Frontend Developer",
-      description: "",
-      skills: ["HTML", "CSS", "JavaSript"],
-    },
-  ],
   skills: [
     {
       title: "Javascript",
@@ -196,9 +135,9 @@ let info = {
       github: "https://github.com/ValdesDev/Psychological-Agenda",
       visit: "https://psychology-clinic.herokuapp.com/",
       description:
-        "<p>This project is a psychologist agenda, to unified your clients and take a control fo your appointments. Taking advantage of my previous experiencie, " +
+        "<p>This project is a psychologist agenda, to unified your clients and take a control fo your appointments. Taking advantage of my previous experience, " +
         "I created a calendar view to make it easy to manage your appointments. </p>" +
-        "<p>Beside that, there's also a landing page where you find out more about the webiste, and take in contact with administration.</p>" +
+        "<p>Beside that, there's also a landing page where you find out more about the website, and take in contact with administration.</p>" +
         "<p>The project is ready to manage several psychologists and different clients.</p>",
     },
     {

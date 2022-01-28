@@ -53,15 +53,6 @@
             <li class="nav-item mx-2">
               <a
                 class="nav-link"
-                href="/about"
-                @click.prevent="$emit('scroll', 'about')"
-                :class="{ 'text-light': nightMode }"
-                >About</a
-              >
-            </li>
-            <li class="nav-item mx-2">
-              <a
-                class="nav-link"
                 href="/contact"
                 @click.prevent="$emit('scroll', 'contact')"
                 :class="{ 'text-light': nightMode }"
